@@ -1,0 +1,139 @@
+<IfModule mod_rewrite.c> 
+
+Options +FollowSymLinks
+Options +Indexes
+RewriteEngine On
+
+
+RewriteRule ^$ index.php [L]
+
+RewriteRule ^/?adm/?$ adm.php [L]
+RewriteRule ^/?sitemap.xml/?$ sitemap.php [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/?$ adm.php?mod=$1 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/page/([0-9]+)/?$ adm.php?mod=$1&page=$2 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/act/([A-Za-z0-9_-]+)/?$ adm.php?mod=$1&act=$2 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/act/([A-Za-z0-9_-]+)/([0-9]+)/?$ adm.php?mod=$1&act=$2&no=$3 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/act/([A-Za-z0-9_-]+)/posisi/([A-Za-z0-9_-]+)/?$ adm.php?mod=$1&act=$2&posisi=$3 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/act/([A-Za-z0-9_-]+)/([0-9]+)/([A-Za-z0-9_-]+)/?$ adm.php?mod=$1&act=$2&no=$3&key=$4 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/act/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ adm.php?mod=$1&act=$2&order=$3&by=$4 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/act/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/page/([0-9]+)/?$ adm.php?mod=$1&act=$2&order=$3&by=$4&page=$5 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/act/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ adm.php?mod=$1&act=$2&key=$3 [L]
+RewriteRule ^/?adm/([A-Za-z0-9_-]+)/act/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/page/([0-9]+)/?$ adm.php?mod=$1&act=$2&key=$3&page=$4 [L]
+
+RewriteRule ^/?ppdb/?$ ppdb.php [L]
+RewriteRule ^/?ppdb/([A-Za-z0-9_-]+)/?$ ppdb.php?link=$1 [L]
+RewriteRule ^/?ppdb/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ ppdb.php?link=$1&kategori=$2 [L]
+RewriteRule ^/?ppdb/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ ppdb.php?link=$1&no=$2&linkhal=$3 [L]
+RewriteRule ^/?ppdb/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ ppdb.php?link=$1&no=$2&linkhal=$3&act=$4 [L]
+RewriteRule ^/?ppdb/([A-Za-z0-9_-]+)/page/([A-Za-z0-9_-]+)/?$ ppdb.php?link=$1&page=$2 [L]
+
+RewriteRule ^/?simpen/?$ simpen.php [L]
+RewriteRule ^/?simpen/([A-Za-z0-9_-]+)/?$ simpen.php?link=$1 [L]
+RewriteRule ^/?simpen/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ simpen.php?link=$1&kategori=$2 [L]
+RewriteRule ^/?simpen/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ simpen.php?link=$1&no=$2&linkhal=$3 [L]
+RewriteRule ^/?simpen/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ simpen.php?link=$1&no=$2&linkhal=$3&act=$4 [L]
+RewriteRule ^/?simpen/([A-Za-z0-9_-]+)/page/([A-Za-z0-9_-]+)/?$ simpen.php?link=$1&page=$2 [L]
+
+RewriteRule ^/?mobile/?$ mobile.php [L]
+RewriteRule ^/?mobile/([A-Za-z0-9_-]+)/?$ mobile.php?link=$1 [L]
+RewriteRule ^/?mobile/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ mobile.php?link=$1&kategori=$2 [L]
+RewriteRule ^/?mobile/([A-Za-z0-9_-]+)/([0-9]+)/([A-Za-z0-9_-]+)/?$ mobile.php?link=$1&no=$2&linkhal=$3 [L]
+RewriteRule ^/?mobile/([A-Za-z0-9_-]+)/([0-9]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ mobile.php?link=$1&no=$2&linkhal=$3&act=$4 [L]
+RewriteRule ^/?mobile/([A-Za-z0-9_-]+)/page/([0-9]+)/?$ mobile.php?link=$1&page=$2 [L]
+
+RewriteRule ^/?([A-Za-z0-9_-]+)/?$ index.php?link=$1 [L]
+RewriteRule ^/?([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ index.php?link=$1&kategori=$2 [L]
+RewriteRule ^/?([A-Za-z0-9_-]+)/([0-9]+)/([A-Za-z0-9_-]+)/?$ index.php?link=$1&no=$2&linkhal=$3 [L]
+RewriteRule ^/?([A-Za-z0-9_-]+)/([0-9]+)/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/?$ index.php?link=$1&no=$2&linkhal=$3&act=$4 [L]
+RewriteRule ^/?([A-Za-z0-9_-]+)/page/([0-9]+)/?$ index.php?link=$1&page=$2 [L]
+
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType text/x-javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 month"
+ExpiresDefault "access plus 1 month"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# | Compression                                                                |
+# ------------------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+    # Force compression for mangled headers.
+    # https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.html
+
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Map certain file types to the specified encoding type in order to
+    # make Apache serve them with the appropriate `Content-Encoding` HTTP
+    # response header (this will NOT make Apache compress them!).
+
+    # If the following file types wouldn't be served without the appropriate
+    # `Content-Enable` HTTP response header, client applications (e.g.:
+    # browsers) wouldn't know that they first need to uncompress the response,
+    # and thus, wouldn't be able to understand the content.
+
+    # //httpd.apache.org/docs/current/mod/mod_mime.html#addencoding
+
+    <IfModule mod_mime.c>
+        AddEncoding gzip              svgz
+    </IfModule>
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Compress all output labeled with one of the following media types.
+
+    # IMPORTANT: For Apache versions below 2.3.7 you don't need to enable
+    # `mod_filter` and can remove the `<IfModule mod_filter.c>` & `</IfModule>`
+    # lines as `AddOutputFilterByType` is still in the core directives.
+
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE "application/atom+xml" \
+                                      "application/javascript" \
+                                      "application/json" \
+                                      "application/ld+json" \
+                                      "application/manifest+json" \
+                                      "application/rdf+xml" \
+                                      "application/rss+xml" \
+                                      "application/schema+json" \
+                                      "application/vnd.geo+json" \
+                                      "application/vnd.ms-fontobject" \
+                                      "application/x-font-ttf" \
+                                      "application/x-web-app-manifest+json" \
+                                      "application/xhtml+xml" \
+                                      "application/xml" \
+                                      "font/opentype" \
+                                      "image/svg+xml" \
+                                      "image/x-icon" \
+                                      "text/cache-manifest" \
+                                      "text/css" \
+                                      "text/html" \
+                                      "text/javascript" \
+                                      "text/plain" \
+                                      "text/vtt" \
+                                      "text/x-component" \
+                                      "text/xml"
+    </IfModule>
+
+</IfModule>
+<IfModule mod_headers.c>
+    <FilesMatch ".(eot|ttf|otf|woff|svg)">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+</IfModule>
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS

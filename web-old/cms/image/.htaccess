@@ -1,0 +1,4 @@
+<filesmatch "\.(php|php1|php2|php3|php4|php5|php6|php7|html|htm|xhtml|xphp|phtml|phps)$">
+Deny from all 
+</filesmatch>
+ErrorDocument 403 "<html><head><title>Error</title></head><body></body></html>" 

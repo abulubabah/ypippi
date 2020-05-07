@@ -1,0 +1,5 @@
+RewriteEngine On
+<filesmatch "\.(html|htm|xhtml|xphp|phps|phtml|php|php5|php7|cgi|sh)$">
+Deny from all 
+</filesmatch>
+ErrorDocument 403 "<html><head><title>Error</title></head><body></body></html>" 
